@@ -89,7 +89,7 @@ Then go to [http://127.0.0.1:3000](http://127.0.0.1:3000)
 
 ------
 
-#### Test Credentails :key:	
+#### Test Credentials :key:	
 
 | Role | Email | Password 
 | ------ | ------ | -------
