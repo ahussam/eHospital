@@ -1,0 +1,63 @@
+@html.extend('ui/admin/layout',function(model){
+
+	@html.block('body',function(model){
+            <div class="col-md-12 align-self-center">
+                        <a href="addNewDep" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down">Add New Department</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+ <div class="row">
+                    <!-- column -->
+                    
+                    <div class="col-12">
+                    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Dempartments</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Number of Employees</th>
+                                                <th>Head of Department</th>
+                                                <th>Edit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Emergency </td>
+                                                <td>100</td>
+                                                <td>Dr. Ali Mohammed</td>
+                                                <td><a href="dep?id=1" class="btn waves-effect waves-light btn-info hidden-md-down">Modify</a></td>
+                                            </tr>
+                                                <tr>
+                                                <td>2</td>
+                                                <td>Cardiology</td>
+                                                <td>60</td>
+                                                <td>Dr. Sabah Salem</td>
+                                                <td><a href="dep?id=2" class="btn waves-effect waves-light btn-info hidden-md-down">Modify</a></td>
+                                            </tr>
+                                                  <tr>
+                                                <td>3</td>
+                                                <td>Neurology</td>
+                                                <td>20</td>
+                                                <td>Dr. Ahmed Hussien</td>
+                                                <td><a href="dep?id=3" class="btn waves-effect waves-light btn-info hidden-md-down">Modify</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    });
+
+});
+

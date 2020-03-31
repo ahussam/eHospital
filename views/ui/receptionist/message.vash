@@ -1,0 +1,56 @@
+@html.extend('ui/receptionist/layout',function(model){
+
+	@html.block('body',function(model){
+   
+
+
+ <div class="row">
+                    <!-- column -->
+                    
+                    <div class="col-12">
+                    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Send Message to Staff</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="5" style="text-align:center;"> 
+                                                
+                                                <br>
+
+                                            <div class="form-group">
+                                        <label for="id" class="col-md-12 " required >To</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="0 For All Users OR id e.g:A2123" class="form-control form-control-line" name="" id="id" autocomplete="off">
+                                        </div>
+                                    </div>
+
+                                          <div class="form-group">
+                                        <label class="col-md-12">Message</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" class="form-control form-control-line" id="" name="message"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" onclick="">Send</button>
+                                        </div>
+                                    </div>
+
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    });
+
+});
+

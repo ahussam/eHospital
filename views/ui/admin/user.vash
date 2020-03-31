@@ -1,0 +1,177 @@
+@html.extend('ui/admin/layout',function(model){
+
+	@html.block('body',function(model){
+<script>
+
+
+
+$(document).ready(function(){
+    
+    
+    let id = (new URL(location).searchParams.get('id')) || -1;
+
+    if(id === -1){
+
+            document.location = 'users';
+
+    }
+
+    $.ajax({url: "api/getUser?id=" + id, type: "POST", success: function(user){
+      
+     showUser(user);
+ 
+ }});
+});
+
+
+function showUser(user){
+
+    
+
+    username.value = user[0].username;
+    email.value = user[0].email;
+    phone.value = user[0].phone;
+    bio.value = user[0].bio;
+    speciality.value = user[0].speciality;
+    role.value = user[0].role;
+    accountStatus.selectedIndex = user[0].accountStatus; 
+    
+
+  
+
+}
+
+
+function updateUser(){
+    event.preventDefault();
+    if(!username.value || !email.value || !password.value){
+    
+    Swal.fire({
+     icon: 'error',
+     title: 'Oops...',
+     text: 'A required field was left blank!',
+     })
+     
+    }else if(password.value.length < 6){
+    
+    
+    Swal.fire({
+     icon: 'error',
+     title: 'Oops...',
+     text: 'Too short password!',
+     })
+     
+
+    }else{
+    let id = (new URL(location).searchParams.get('id'))
+    var formData = $("#myform").serializeArray();
+    $.post("api/updateUser?id="+ id, formData).done(function (data) {
+    
+    Swal.fire({
+    position: 'top-end',
+    icon: 'success',
+    title: 'Your work has been saved',
+    showConfirmButton: false,
+    timer: 1500
+    })
+
+     
+
+    });
+    }
+
+
+}
+
+
+</script>
+
+
+
+         <div class="col-md-12 align-self-center">
+                        <a href="addNewDep" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down">Add  User</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+
+
+ <div class="row">
+                    <div class="col-lg-8 col-xlg-9 col-md-7">
+                        <div class="card">
+                            <!-- Tab panes -->
+                            <div class="card-body">
+                                <form class="form-horizontal form-material" id="myform">
+                                    <div class="form-group">
+                                        <label class="col-md-12">User Name</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="User Name" class="form-control form-control-line" name="username" id="username" required >
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="example-email" class="col-md-12 " required >Email</label>
+                                        <div class="col-md-12">
+                                            <input type="email" placeholder="email@email.com" class="form-control form-control-line" name="email" id="email">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12" required  >Password</label>
+                                        <div class="col-md-12">
+                                            <input type="password"  name="password" id="password" minlength="8" class="form-control form-control-line">
+                                        </div>
+                                    </div>
+                                        <div class="form-group">
+                                        <label class="col-sm-12" required >System Role</label>
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line" id="role" name="role">
+                                                <option value="1">Admin</option>
+                                              <option value="2">Doctor</option>
+                                              <option value="3">Receptionist</option>
+                                              <option value="4">Pharmacist</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12" required  >Phone No</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="123 456 7890" class="form-control form-control-line" name="phone" id="phone">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Bio</label>
+                                        <div class="col-md-12">
+                                            <textarea rows="5" class="form-control form-control-line" id="bio" name="bio"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="col-md-12">Speciality</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="" class="form-control form-control-line" name="speciality" id="speciality">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label class="col-sm-12" required >Account Status <small> 0 for Disabled 1 for Enabled</small></label>
+                                        <div class="col-sm-12">
+                                            <select class="form-control form-control-line" id="accountStatus" name="accountStatus">
+                                                <option>0</option>
+                                                <option>1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" onclick="updateUser();">Update Profile</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Column -->
+                </div>
+
+    });
+
+});
+

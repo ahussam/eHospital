@@ -1,0 +1,29 @@
+{
+  "name": "ehospital",
+  "version": "1.0.0",
+  "description": "A web-based Hospital Management System with a recovery backup feature that can recover the system in the case of a ransomware attack happens.",
+  "main": "server.js",
+  "dependencies": {
+    "connect-mongo": "^3.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.16.2",
+    "mongoose": "^5.6.10",
+    "readline-sync": "^1.4.10",
+    "vash": "^0.13.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ahussam/eHospital.git"
+  },
+  "author": "Abdullah Hussam",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ahussam/eHospital/issues"
+  },
+  "homepage": "https://github.com/ahussam/eHospital"
+}

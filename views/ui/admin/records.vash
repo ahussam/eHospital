@@ -1,0 +1,46 @@
+@html.extend('ui/admin/layout',function(model){
+
+	@html.block('body',function(model){
+   
+
+
+ <div class="row">
+                    <!-- column -->
+                    
+                    <div class="col-12">
+                    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Search Records</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="5" style="text-align:center;">Search by Record ID or Patient Name<br>
+                                                
+                                                <div class="form-group">
+                                        <label class="col-md-12" ></label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="#12772 or Jwad Naser" class="form-control form-control-line" name="id" id="">
+                                        </div>
+                                    </div>
+ <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-info" onclick="">Search</button>
+                                        </div>
+                                    </div>
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    });
+
+});
+

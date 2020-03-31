@@ -1,0 +1,153 @@
+@html.extend('ui/admin/layout',function(model){
+
+	@html.block('body',function(model){
+   
+
+
+ <div class="row">
+                    <!-- column -->
+                    
+                    <div class="col-12">
+                    
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">System Recovery</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th colspan="5" style="text-align:center;"> 
+                                                
+                                                <br>
+                                                <form action="recover" method="POST">
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="radio1" name="keys" value="1">
+  <label class="form-check-label" for="radio1">1</label>
+</div>
+
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="radio2" name="keys" value="2">
+  <label class="form-check-label" for="radio2">2</label>
+</div>
+<div class="form-check">
+  <input type="radio" class="form-check-input" id="radio3" name="keys" value="4">
+  <label class="form-check-label" for="radio3">4</label>
+
+</div> <h2>keys</h2>
+<div class="div1" style="display:none;">
+                                  <div class="form-group">
+                                        <label class="col-md-12">Key:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys1" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+</div>
+<div class="div2" style="display:none;">
+                                  <div class="form-group">
+                                        <label class="col-md-12">Key 1:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys1" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+ <div class="form-group">
+                                        <label class="col-md-12">Key 2:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys1" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+                                    
+</div>
+
+<div class="div3" style="display:none;">
+                                  <div class="form-group">
+                                        <label class="col-md-12">Key 1:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys1" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Key 2:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys2" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Key 3:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys3" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+                                     <div class="form-group">
+                                        <label class="col-md-12">Key4:</label>
+                                        <div class="col-md-12">
+                                            <input type="text" placeholder="Key" class="form-control form-control-line" name="keys4" id="keys" required >
+                                        </div>
+                                        <br>
+
+                                    </div>
+</div>
+                             <label class="btn waves-effect waves-light btn btn-info hidden-sm-down" for="my-file-selector">
+                             <input id="my-file-selector" type="file" class="d-none">
+                             Choose Encrypted CSV File
+                                          </label>
+
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <button class="btn btn-success" onclick="">Recover</button>
+                                        </div>
+                                    </div>
+</form>
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+<script>
+
+$(function () {
+    $('#radio1').click(function () {
+        $('.div2').hide();
+        $('.div3').hide();
+        $('.div1').show();
+    });
+    $('#radio2').click(function () {
+        $('.div1').hide();
+        $('.div3').hide();
+        $('.div2').show();
+
+    });
+     $('#radio3').click(function () {
+        $('.div1').hide();
+        $('.div2').hide();
+        $('.div3').show();
+    });
+});
+
+</script>
+
+
+    });
+
+});
+

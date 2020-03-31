@@ -1,0 +1,52 @@
+@html.extend('ui/receptionist/layout',function(model){
+
+	@html.block('body',function(model){
+
+
+ <div class="row">
+                    <!-- column -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">Cases</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Patient Name</th>
+                                                <th>Illness</th>
+                                                <th>Time</th>
+                                                <th>Assigned To</th>
+                                                <th>Edit</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>1</td>
+                                                <td>Sarmad Abd</td>
+                                                <td>Heart Attack</td>
+                                                <td>Since 2 hours ago</td>
+                                                <td>Dr. Ali Mohammed</td>
+                                                <td><a href="case?id=1" class="btn waves-effect waves-light btn-info hidden-md-down">Modify</a></td>
+                                            </tr>
+                                                <tr>
+                                                <td>2</td>
+                                                <td>Zaman Saed</td>
+                                                <td>2nd Degree Burn</td>
+                                                <td>Since 5 hours ago</td>
+                                                <td>Dr. Sabah Salem</td>
+                                                <td><a href="case?id=2" class="btn waves-effect waves-light btn-info hidden-md-down">Modify</a></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    });
+
+});
+

@@ -1,0 +1,121 @@
+@html.extend('ui/admin/layout',function(model){
+
+	@html.block('body',function(model){
+
+<script>
+        var lastLoadedUser = 0; 
+
+        var roleObj = {
+
+                "1": "Admin",
+                "2": "Doctor",
+                "3": "Receptionist",
+                "4": "Pharmacist"
+            }
+
+
+
+
+
+    function showUsers(users){
+                
+
+                if(lastLoadedUser === users.length){
+                    alert("No more users to view!");
+                    exit();
+                }
+                    
+                    
+                for(var i = lastLoadedUser; i<users.length; i++){
+                    
+                    // View 20 users per page 
+
+                    if(i == lastLoadedUser + 20 - 1 ){
+                        break; 
+                    }
+               myusers.innerHTML +=   `  <tr>
+                                                <td>${users[i].unique_id}</td>
+                                                <td>${users[i].username}</td>
+                                                <td>${users[i].email}</td>
+                                                <td>${roleObj[users[i].role]}</td>
+                                                <td>${users[i].speciality}</td>
+                                                <td>
+                        <a href="user?id=${users[i].unique_id}" class="btn waves-effect waves-light btn-info hidden-md-down">Modify</a>
+                    </td>
+                                            </tr>`
+
+                               lastLoadedUser =  i;          
+                    }
+
+                    
+if( lastLoadedUser!== users.length && lastLoadedUser > 20){
+
+     myusers.innerHTML +=   `           <tr id="loadmoreButton">
+                                                <th></th>
+                                                <th></th>
+                                                <th colspan="2" style="text-align: center;">
+                                                <button class="btn waves-effect waves-light btn-info hidden-md-down" id="showmore" onclick="$('#loadmoreButton').remove(); showUsers();">Load More Users</button>
+                                                </th>
+                                                <th></th>
+                                                <th></th>
+                                                </tr>`
+
+}
+
+
+            }
+    
+$(document).ready(function(){
+    $.ajax({url: "api/getUsers", type: "POST", success: function(users){
+     
+     showUsers(users);
+     
+
+
+ }});
+});
+
+</script>
+   <div class="col-md-12 align-self-center">
+                        <a href="addNewUser" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down">Add New User</a>
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+<div class="row">
+                    <!-- column -->
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="card-title">System Users</h4>
+                                <div class="table-responsive">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Role</th>
+                                                <th>Speciality</th>
+                                                <th>Edit</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody id="myusers">
+
+                                       
+
+                                         
+                                        </tbody>
+                                    </table>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+    });
+
+});
+

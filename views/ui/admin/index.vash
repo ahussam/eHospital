@@ -1,0 +1,64 @@
+@html.extend('ui/admin/layout',function(model){
+
+	@html.block('body',function(model){
+
+
+
+                 <div class="row">
+                    <!-- Column -->
+                         <!-- Start Feeds -->
+                    <div class="col-lg-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Today Staff</h5>
+                                <ul class="feeds">
+                                    <li><div class="bg-light-info"><i class="fas fa-user-md"></i></div> Ahmed Ali, Hussien Nabel, Jasim Ahmed.<span class="text-muted">Doctors</span></li>
+                                    <li><div class="bg-light-info"><i class="fas fa-user-nurse"></i></div> Ahmed Ali, Hussien Nabel, Jasim Ahmed.<span class="text-muted">Nurses</span></li>
+                                    <li><div class="bg-light-info"><i class="fas fa-tablets"></i></div> Ahmed Ali, Hussien Nabel, Jasim Ahmed.<span class="text-muted">Pharmacists</span></li>
+                                    <li><div class="bg-light-info"><i class="fas fa-teeth"></i></div> Ahmed Ali, Hussien Nabel, Jasim Ahmed.<span class="text-muted">Dentists</span></li>
+                                    <li><div class="bg-light-info"><i class="fas fa-ambulance"></i></div> Ahmed Ali, Hussien Nabel, Jasim Ahmed.<span class="text-muted">Ambulance</span></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- End Feeds -->
+                    <!-- Column -->
+                    <!-- Column -->
+               <!-- Start Notification -->
+                    <div class="col-lg-6 col-md-12">
+                        <div class="card card-body mailbox">
+                            <h5 class="card-title">Today Tasks</h5>
+                            <div class="message-center ps ps--theme_default ps--active-y" data-ps-id="a045fe3c-cb6e-028e-3a70-8d6ff0d7f6bd">
+                                <!-- Message -->
+                                <a href="#">
+                                    <div class="btn btn-success btn-circle"><i class="fa fa-calendar-check-o"></i></div>
+                                    <div class="mail-contnet">
+                                        <h5>Event today</h5> <span class="mail-desc">Just a reminder that you have event</span> <span class="time">9:10 AM</span> </div>
+                                </a>
+                                <!-- Message -->
+                                <a href="#">
+                                    <div class="btn btn-primary btn-circle"><i class="fa fa-user"></i></div>
+                                    <div class="mail-contnet">
+                                        <h5>Meetings</h5> <span class="mail-desc">Just see the my admin!</span> <span class="time">9:02 AM</span> </div>
+                                </a>
+                                <br>
+                                
+                            </div>
+                        </div>
+                         <div class="col-md-8 align-self-center">
+                        <a href="addNewDep" class="btn waves-effect waves-light btn btn-info pull-right hidden-sm-down">Add  New Task</a>
+                    </div>
+                    </div>
+                    
+                    <!-- End Notification -->
+                </div>
+
+                <script>
+                
+                </script>
+
+    });
+
+});
+
