@@ -30,7 +30,7 @@ A web-based Hospital Management System with a recovery backup feature that can r
         +---admin // Admin pages
         +---doctor // Doctor pages
         +---pharmacist // Pharmacist pages
-        \---receptionist // receptionist pages
+        \---receptionist // Receptionist pages
 ```
 
 ## Technologies :hammer_and_wrench:	
