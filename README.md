@@ -43,6 +43,7 @@ MongoDB | MongoDB is a cross-platform document-oriented database program. |https
 Mongoose |Mongoose is an Object Data Modeling (ODM) library for MongoDB and Node|https://mongoosejs.com/|
 Vash|Vash is a template view engine that uses Razor Syntax|https://github.com/kirbysayshi/vash|
 ...|...|...|
+
 ### Frontend :desktop_computer:  
 | Name | Description | Link 
 | ------ | ------ | ------
@@ -54,6 +55,8 @@ Font Awesome|The world's most popular and easiest to use icon|https://fontawesom
 ### Database Schema :card_file_box:	 
 ![DB](/ss/db.png)
 
+------
+
 
 ### REST API :link:	
 
@@ -64,11 +67,15 @@ Font Awesome|The world's most popular and easiest to use icon|https://fontawesom
 /receptionist/api/| Receptionist operations 
 /pharmacist/api/| Pharmacist operations
 
+------
 
 ### Encrypted Backup :package:	
 
 Use Cron to trigger `/encryptedBackUp/encryptPatientsRecords.js` 
 * Read more at [https://ahussam.me/make-encrypted-backup-with-multiple-subkeys-in-NodeJS/](https://ahussam.me/make-encrypted-backup-with-multiple-subkeys-in-NodeJS/)
+
+------
+
 
 ### Deployment :rocket:	
 
@@ -80,6 +87,8 @@ root@ubuntu:~# npm install
 
 Then go to [http://127.0.0.1:3000](http://127.0.0.1:3000) 
 
+------
+
 #### Test Credentails :key:	
 
 | Role | Email | Password 
@@ -88,6 +97,8 @@ Admin | admin@admin.com| 123456
 Doctor| doctor@doctor.com| 123456
 Receptionist|receptionist@receptionist.com|123456
 Pharmacist|pharmacist@pharmacist.com|123456 
+
+------
 
 ### Screenshots :camera:	
 #### Admin UI
@@ -99,6 +110,8 @@ Pharmacist|pharmacist@pharmacist.com|123456
 #### Pharmacist UI
 ![DB](/ss/pharmacist.png)
 
+------
+
 ### TODO :white_check_mark: 
 
 - [ ] Implement REST api functions. 
@@ -106,6 +119,9 @@ Pharmacist|pharmacist@pharmacist.com|123456
 - [ ] Code frontend Ajax calls. 
 - [ ] Look for TODO in file to finish them. 
 - [ ] Implement database other schema models and link them
+
+------
+
 ## License :page_facing_up:	
 Free to use, copy and distribute. 
 
