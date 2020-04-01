@@ -4,7 +4,7 @@ A web-based Hospital Management System with a recovery backup feature that can r
 
 ## Graduation Project Details :card_file_box:	
 * Students: Abdullah Hussam, Cenaa Ghani
-* Supervisor: Dr.Ahemd Saad 
+* Supervisor: Dr. Ahemd Saad 
 * Graduation Year: 2020
 * Discussion Board: TBD
 * Presentation: TBD
@@ -82,7 +82,8 @@ Use Cron to trigger `/encryptedBackUp/encryptPatientsRecords.js`
 ```
 root@ubuntu:~# git clone https://github.com/ahussam/eHospital.git
 root@ubuntu:~# cd eHospital
-root@ubuntu:~# npm install 
+root@ubuntu:~/eHospital# npm install 
+root@ubuntu:~/eHospital# node server.js 
 ```
 
 Then go to [http://127.0.0.1:3000](http://127.0.0.1:3000) 
