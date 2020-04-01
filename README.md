@@ -6,7 +6,7 @@ A web-based Hospital Management System with a recovery backup feature that can r
 * Students: Abdullah Hussam, Cenaa Ghani
 * Supervisor: Dr.Ahemd Saad 
 * Graduation Year: 2020
-* Dussction Board: TBD
+* Discussion Board: TBD
 * Presentation: TBD
 * Blog Post: http://ahussam.me/make-encrypted-backup-with-multiple-subkeys-in-NodeJS/
 
