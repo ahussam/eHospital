@@ -4,7 +4,7 @@ A web-based Hospital Management System with a recovery backup feature that can r
 
 ## Graduation Project Details :card_file_box:	
 * Students: Abdullah Hussam, Cenaa Ghani
-* Supervisor: Dr. Ahemd Saad 
+* Supervisor: Dr. Ahmed Saad 
 * Graduation Year: 2020
 * Discussion Board: TBD
 * Presentation: TBD
