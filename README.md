@@ -117,6 +117,7 @@ Pharmacist|pharmacist@pharmacist.com|123456
 
 - [ ] Implement REST api functions. 
 - [ ] Implement XSS filtering before inserting to DB with Dompurify. 
+- [ ] Implement CSRF toknes protection. 
 - [ ] Code frontend Ajax calls. 
 - [ ] Look for TODO in files to finish them. 
 - [ ] Implement database other schema models and link them
